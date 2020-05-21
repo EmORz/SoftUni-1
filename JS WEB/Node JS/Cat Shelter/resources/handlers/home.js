@@ -5,9 +5,9 @@ const cats = require('../data/cats');
 
 module.exports = (req, res) => {
     const pathname = url.parse(req.url).pathname;
-
+        let filePath="" ;
     if (pathname === '/' && req.method === 'GET') {
-        const filePath = path.normalize(
+         filePath = path.normalize(
             path.join(__dirname, '../views/home/index.html')
         );
     } else {
